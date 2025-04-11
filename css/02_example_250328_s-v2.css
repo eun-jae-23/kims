@@ -1,0 +1,94 @@
+@charset "utf-8";
+
+/* reset */
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+
+/* common */
+
+.clear::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+
+/* 02_example_250328_s-v2 */
+
+body {
+    color: #222;
+}
+
+.best-recipe {
+    margin: 100px 0px;
+}
+
+
+.best-recipe .title {
+    text-align: center;
+}
+.best-recipe .title h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+.best-recipe .title p {
+    margin-bottom: 30px;
+}
+
+
+.best-recipe .con {
+    outline: 1px solid red;
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 5%;
+    box-sizing: border-box;
+}
+.best-recipe .con .box {
+    width: 18.4%;
+    float: left;
+    overflow: hidden;
+    position: relative; /* h3의 기준!!! */
+}
+.best-recipe .con .box ~ .box {
+    margin-left: 2%;
+}
+
+.best-recipe .con .b1 {border-radius: 0 130px 0 0;}
+.best-recipe .con .b2 {border-radius: 0 0 0 150px;}
+.best-recipe .con .b3 {border-radius: 0 0 150px 0;}
+.best-recipe .con .b4 {border-radius: 0 0 150px 0;}
+.best-recipe .con .b5 {border-radius: 0 150px 0 0;}
+
+.best-recipe .con .box a {
+    display: block;
+}
+.best-recipe .con .box a img {
+    width: 100%;
+    display: block;
+}
+.best-recipe .con .box a h3 {
+    font-size: 32px;
+    font-weight: 700;
+    position: absolute;
+    left: 30px;
+    top: 30px;
+}

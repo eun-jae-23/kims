@@ -1,0 +1,190 @@
+@charset "utf-8";
+
+/* reset.css */
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,ol {
+    list-style: none;
+}
+
+/* common.css */
+
+.inner {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+
+/* float 해제 */
+
+.clear::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* 구글 웹폰트 */
+
+/*
+1) Nanum Gothic / font-weight : 400,700,800
+font-family: "Nanum Gothic", sans-serif;
+*/
+
+
+
+/* 05_menu2_selfwork_250317.css */
+
+body {
+    font-family: "Nanum Gothic", sans-serif;
+    font-size: 100%;
+    font-weight: 400;
+    color: #222;
+}
+
+header {
+    /* background-color: darkgoldenrod; */
+    text-transform: uppercase;
+    margin: 50px auto 20px;
+}
+header h1 {
+    /* outline: 1px solid red; */
+    float: left;
+}
+header h1 a {
+    display: block;
+    font-size: 20px;
+    color: blueviolet;
+    font-weight: 800;
+}
+
+header nav {
+    /* outline: 1px solid red; */
+    font-size: 20px;
+    float: right;
+}
+header nav p {
+    float: left;
+    margin: 0 30px;
+}
+header nav p:first-child {
+    margin-left: 0;
+}
+header nav p:last-child {
+    margin-right: 15px;
+}
+header nav p a {
+    display: block;
+    color: #222;
+}
+
+
+.content {
+    /* background-color: lightblue; */
+    max-width: 1400px;
+    margin: 0 auto 50px;
+}
+
+.content .con-main {
+    /* outline: 1px solid red; */
+    background-color: yellow;
+    height: 500px;
+    margin-bottom: 50px;
+    padding-top: 20px;
+    box-sizing: border-box;
+}
+.content .con-main p {
+    /* outline: 1px solid red; */
+    text-align: center;
+}
+
+
+.content .con-sub {
+    background-color: lightgray;
+    text-align: center;
+    margin-bottom: 30px;
+    width: 100%;
+    padding: 20px 0;
+}
+.con-sub h2 {
+    /* outline: 1px solid red; */
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.con-sub .box-wrap {
+    /* outline: 1px solid red; */
+    width: 100%;
+    margin-bottom: 20px;
+    margin: 0 auto 20px;
+}
+.con-sub .box-wrap .box {
+    background-color: yellow;
+    height: 300px;
+    float: left;
+}
+.con-sub .box-wrap .box1 {
+    width: 18%;
+    margin-left: 1.5%;
+}
+.con-sub .box-wrap .box2 {
+    width: 54%;
+    margin: 0 3.5%;
+}
+.con-sub .box-wrap .box3 {
+    width: 18%;
+    margin-right: 1.5%;
+}
+.con-sub .box-wrap .box p {
+    /* outline: 1px solid red; */
+    margin-top: 10px;
+}
+
+
+.content .banner {
+    /* outline: 1px solid red; */
+    background-color: blueviolet;
+    height: 200px;
+    text-align: center;
+    padding-top: 20px;
+    box-sizing: border-box;
+}
+.content .banner p {
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+footer {
+    background-color: lightgray;
+    line-height: 100px;
+}
+footer p {
+    float: left;
+}
+footer ul {
+    float: right;
+}
+footer ul li {
+    float: left;
+    display: block;
+    margin-left: 20px;
+}
+footer ul li a {
+    color: #222;
+}
+footer ul li a:hover {
+    text-decoration: underline;
+}

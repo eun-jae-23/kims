@@ -1,0 +1,152 @@
+@charset "utf-8";
+
+
+/* 
+
+ 수업내용 메모)
+
+ float 내용만큼 너비 잡음 ->
+ -> 너비 퍼센트로 줌
+ -> 너비는 적용되었으나 이미지가 제대로 안보임!
+ -> 이유 - 이미지는 크기조절하기 전 까지 이미지 원래 사이즈 들어감
+ -> 이미지는 이미지태그 선택해서 크기조절 해야 된다!
+ 이미지 태그의 부모 박스 태그의 너비를 주었으면, 이미지 태그에 전체 사용하라고 너비 100% 주기!
+ 이미지 태그에 너비만 주면 높이는 자동으로 비율 맞춰 들어감
+ or 높이만 주면 너비는 자동으로 비율 맞춰 들어감. 보통 너비만 줌
+
+ */
+
+
+
+/* ************************* reset ************************* */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+ul, ol {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight: normal; /* =400 */
+}
+
+/* ************************* 공통으로 사용할 디자인 ************************* */
+
+/* float 해제를 위한 클래스 */
+
+.clear::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+
+/* ************************* 01_example_teacher_250312.html ************************* */
+
+
+body {
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 400;
+}
+
+.container {
+    background-color: bisque;
+    padding: 100px 0;
+}
+
+.recipe {
+    width: 1280px;
+    margin: 0 auto;
+}
+/*
+마진이 제일 바깥을 감싸는 요소가 아닌 요소에 들어가면,
+내용 포함된 것이 아니므로 전체 덩어리의 바깥쪽처럼 적용되는 문제 생김
+*/
+
+
+.recipe .title {
+    margin-bottom: 50px;
+}
+
+.recipe .title h2 {
+    font-size: 40px;
+    font-weight: 700;
+}
+.recipe .title p {
+    font-size: 20px;
+    color: #555;
+}
+
+
+
+/* .recipe .content {
+    background-color: beige;
+} */
+
+/* 
+float된 요소에 width값이 설정되지 않았을 경우,
+내용만큼의 너비(width)를 갖는다!
+*/
+
+.recipe .content .box {
+    /* outline: 2px solid blue; */
+    margin-bottom: 20px;
+    float: left;
+
+    /* 1) 전체 공간의 1/4을 너비로 사용 */
+    /* width: 25%;
+    padding: 0 20px;
+    box-sizing: border-box; */
+
+    /* 2) 여백을 제외한 너비설정 */
+    width: 23.5%;
+    /* margin-right: 2%; */
+}
+
+.recipe .content .box ~ .box {
+    margin-left: 2%;
+}
+
+.recipe .content .box:nth-child(4n+1) {
+    margin-left: 0%;
+}
+
+
+/* 2) 여백을 제외한 너비설정 */
+/* .recipe .content .box:last-child {
+    margin-right: 0%;
+} */
+
+
+
+
+.recipe .content .box img {
+    width: 100%;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+ 
+
+.recipe .content .box h3 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+.recipe .content .box h3 a {
+    color: #333;
+}
+.recipe .content .box h3 a:hover {
+    text-decoration: underline;
+    color: tomato;
+}
+.recipe .content .box p {
+    font-size: 18px;
+    color: #666;
+}

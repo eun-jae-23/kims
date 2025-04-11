@@ -1,0 +1,62 @@
+@charset "utf-8";
+
+/* ********************** reset ********************** */
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+h2 {
+    font-size: 100%;
+    font-weight: normal;
+}
+
+
+/* ********************** 공통 ********************** */
+
+/* float 해제를 위한 클래스 */
+
+.clear::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* ********************** 04_example_250312.html ********************** */
+
+section {
+    /* outline: 3px solid red; */
+    width: 100%;
+    padding: 50px;
+    background-color: #7A73D1;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: 700;
+    color: #fff;
+}
+
+section .img-wrap {
+    /* outline: 3px solid red; */
+    width: 1260px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+section .img-wrap img {
+    width: 16.66%;
+    float: left;
+}
+
+
+section .sns {
+    width: 25%;
+    background-color: orange;
+    text-align: center;
+    color: #fff;
+    margin: 0 auto;
+    padding: 10px 0;
+}
